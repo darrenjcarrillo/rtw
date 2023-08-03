@@ -6,30 +6,21 @@ section.welcome {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  margin-top: 100px;
-
-  @include is1300 {
-    margin-top: 135px;
-  }
-  
-  @include isRetina {
-    min-height: 105vh;
-  }
-  
+  // border-radius: 0 0 100px 100px;
 
  
   .img {
     position: absolute;
-    top: 0;
+    top: 34px;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
     margin: 0 auto;
     z-index: 1;
-
+    // border-radius: 0 0 100px 100px;
     align-items: center;
     justify-content: center;
 
@@ -67,15 +58,17 @@ section.welcome {
 
       img {
         object-fit: cover;
-        object-position: center;
+        object-position: top;
         height: 100%;
         width: 100%;
+
+        border-radius: 0 0 60px 60px;
         @media screen and (max-width: 1240px) {
           // opacity: 0.3;
         }
 
         @media screen and (max-width: 700px) {
-          object-position: center;
+          object-position: top;
           // opacity: 0.3;
         }
  
@@ -103,10 +96,6 @@ section.welcome {
       width: 90%;
     }
 
-    @include isRetina {
-      width: 85%;
-    }
-
 
     .content {
       width: 100%;
@@ -123,10 +112,6 @@ section.welcome {
         flex-direction: column;
         align-items: center;
         height: 100%;
-        margin-top: 100px;
-
-
-
 
 
         .col-item {
@@ -136,81 +121,57 @@ section.welcome {
           align-items: center;
           justify-content: center;
 
-          .h-container   {
-            display: flex;
-            width: 100%;
-           
-            flex-direction: column;  
-            
-            h1 {
-              margin: 0;
-            }
-
-
-            @include isLarge {
-              flex-direction: row;
-              justify-content: space-between;
-            }
+          h1 {
+            margin-bottom: 40px;
+            color: rgba($f, 0.7);
           }
 
 
-
-          h2 {
-
-            @include isMedium {
-              margin-bottom: 30px;
-            }
-          }
+          &:nth-child(2) {
+            align-items: flex-end;
+            margin-bottom: 50px;    
 
           .text-container {
             position: relative;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
-            .image-g {
-              position: absolute;
-
-              @media screen and (max-width: 500px) {
-                height: 160px;
-              }
-
-              img {
-
-                @media screen and (max-width: 500px) {
-                  width: 100%;
-                  height: 100%;
-                }
-  
-
-              }
+            @include isLarge {
+              width: 60%;
             }
 
+            @include isXLarge {
+              width: 50%;
+            }
+
+            @include isRetina {
+              width: 40%;
+            }
+
+            @include is1700 {
+              width: 37%;
+            }
               
             p {
-              text-align: center;
+              text-align: left;
               width: 100%;
               color: $f;
-              
-              margin-top: 20px;
-
-              @include is600 {
-                margin-top: 110px;
-              }
+      
+              // @include isLarge {
+              //   width: 90%;
+              // }
 
 
-              @include isLarge {
-                width: 90%;
-                margin-top: 180px;
-              }
+              // @include isXLarge {
+              //   width: 75%;
+              // }
 
 
-              @include isXLarge {
-                width: 75%;
-              }
-
-
-              @include isRetina {
-                width: 65%;
-
-              }
+              // @include isRetina {
+              //   width: 65%;
+              // }
 
           
             }
@@ -220,11 +181,17 @@ section.welcome {
     
      
           .btn-container {
-            margin-top: 30px;
+            // margin-top: 20px;
             position: relative;
             z-index: 999;
             display: flex;
           }
+
+          }
+
+
+
+
 
         }
       }

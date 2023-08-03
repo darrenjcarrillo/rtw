@@ -4,13 +4,14 @@
 	left: 0;
 	right: 0;
 	z-index: 123123;
-	background: #fff;
+	// background: #fff;
   transition: 0.3s;
-	background-color: #fff;
+	background-color: transparent;
 
 	&.act {
     transition: 0.3s;
 		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+		background-color: #DAC8AD;
 	}
 
 	@media screen and (max-width: 992px) {
@@ -64,7 +65,7 @@
 
 	section.top {
 		margin: 0 auto;
-		// background-color: $color-secondary;
+		background-color: $f;
 		padding: 12px 0;
 		position: relative;
 		z-index: 0;
@@ -274,7 +275,7 @@
 
 				@media screen and (max-width: 992px) {
 					position: relative;
-					width: 240px;
+					width: 100px;
 				}
 
 				img {
@@ -551,12 +552,12 @@
 
 				@include isLarge {
 					align-items: center;
-		
+					padding-bottom: 25px;
 				}
 
 				@include is1100 {
 					// padding-top: 10px;
-					padding-bottom: 10px;
+					// padding-bottom: 10px;
 				}
 
 				@include isXLarge {
@@ -593,7 +594,7 @@
 					// Logo
 					div.logo-menu {
 						position: relative;
-					
+
 						// background-color: $color-main;
 						// position: absolute;
 						display: none;
@@ -601,6 +602,8 @@
 						// width: 150px;
 						// height: 147px;
 						margin: 0 30px;
+						width: 100px;
+						top: 15px;
 
 						@include isLarge {
 							// display: none;
@@ -611,13 +614,13 @@
 						}
 
 						@include isXLarge {
-							width: 250px;
+							width: 115px;
 							display: flex;
 							justify-content: center;
 						}
 
 						@include is1700 {
-							width: 300px;
+							width: 130px;
 						}
 			
 			
@@ -716,7 +719,7 @@
 
 					&.blue-text {
 						a.menulink {
-							color: $color-third;
+							color: $b;
               margin-right: 0;
 							font-weight: 500;
 
@@ -740,7 +743,7 @@
 						text-transform: uppercase;
 						font-weight: 600;
 						font-size: 0.9375rem;
-						color: $color-third;
+						color: $b;
 
 						display: flex;
 
