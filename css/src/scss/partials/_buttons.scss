@@ -16,29 +16,12 @@
 // main button container
 
 .ui-btn {
-  // display: flex;
-  // color: $f;
-  // display: flex;
-  // align-items: center;
-  // font-family: $font-primary;
-  // opacity: 1;
-  // background-color: $f;
-  // padding: 25px 40px;
-  // justify-content: center;
-  // transition: 0.3s;
-  // line-height: 1;
-  // font-weight: 700;
-  // font-size: 1rem;
-  // // letter-spacing: 2px;
-  // border-radius: 45px;
-
   display: inline-block;
   padding: 15px 50px;
   border-radius: 10rem;
   color: $f;
   text-transform: uppercase;
   font-size: 1rem;
-  // letter-spacing: .15rem;
   transition: all .3s;
   position: relative;
   overflow: hidden;
@@ -88,25 +71,6 @@
   }
 
 
-  // &:hover {
-  //   text-decoration: none;
-  //   transition: 0.3s;
-  //   transform: scale(0.95);
-  //   opacity: 0.8;
-  //   color: $f;
-  // }
-
-
-  &.ui-btn-teal {
-    background-color: $color-main;
-    color: $f;
-  }
-
-  
-  &.ui-btn-blue {
-    background-color: $color-fourth;
-    color: $f;
-  }
 
   &.ui-btn-line {
     
