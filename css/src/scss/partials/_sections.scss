@@ -10,6 +10,10 @@ section.welcome {
   justify-content: center;
   // border-radius: 0 0 100px 100px;
 
+  @include isRetina {
+    min-height: 1080px;
+  }
+
  
   .img {
     position: absolute;
@@ -124,12 +128,16 @@ section.welcome {
           h1 {
             margin-bottom: 40px;
             color: rgba($f, 0.7);
+
+            @include isRetina {
+              margin-bottom: 60px;
+            }
           }
 
 
           &:nth-child(2) {
             align-items: flex-end;
-            margin-bottom: 50px;    
+            margin-bottom: 80px;    
 
           .text-container {
             position: relative;
@@ -185,6 +193,10 @@ section.welcome {
             position: relative;
             z-index: 999;
             display: flex;
+            
+            @include isRetina {
+              margin-top: 30px;
+            }
           }
 
           }
