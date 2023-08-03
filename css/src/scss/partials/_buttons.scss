@@ -1,0 +1,66 @@
+/* BUTTON STYLES */
+
+.btn-container {
+  display: flex;
+  // align-items: center;
+  gap: 20px;
+
+  // background-color: transparent;
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    // align-items: center;
+  }
+}
+
+// main button container
+
+.ui-btn {
+  display: flex;
+  color: $b;
+  display: flex;
+  align-items: center;
+  font-family: $font-primary;
+  opacity: 1;
+  background-color: $f;
+  padding: 17px 50px;
+  justify-content: center;
+  // width: 250px;
+  transition: 0.3s;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 0.9375;
+  letter-spacing: 2px;
+  border-radius: 30px;
+
+  @include isLarge {
+    font-size: 1rem;
+  }
+
+
+  &:hover {
+    text-decoration: none;
+    transition: 0.3s;
+    transform: scale(0.95);
+    // color: $f;
+    opacity: 0.8;
+  }
+
+
+  &.ui-btn-teal {
+    background-color: $color-main;
+    color: $f;
+  }
+
+  
+  &.ui-btn-blue {
+    background-color: $color-fourth;
+    color: $f;
+  }
+
+
+
+
+}
+
+

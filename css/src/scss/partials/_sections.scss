@@ -1,0 +1,2067 @@
+// --------------------------------------------------------------------------
+// SECTION STYLES
+// --------------------------------------------------------------------------
+
+section.welcome {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+
+  @include is1300 {
+    margin-top: 135px;
+  }
+  
+  @include isRetina {
+    min-height: 105vh;
+  }
+  
+
+ 
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    z-index: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+
+      &::after {
+        content: close-quote;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: -moz-radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
+        background: radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#0a0a0a",GradientType=1);
+        opacity: .9;
+        height: 100%;
+
+      }
+
+      @include isLarge {
+
+        &::after {
+          display: none;
+        }
+      }
+
+            
+
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 1240px) {
+          // opacity: 0.3;
+        }
+
+        @media screen and (max-width: 700px) {
+          object-position: center;
+          // opacity: 0.3;
+        }
+ 
+      }
+    }
+          
+  }
+
+
+  .container-fluid {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0;
+
+
+
+    @include isLarge {
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+    }
+
+    @include isRetina {
+      width: 85%;
+    }
+
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin-top: 100px;
+
+
+
+
+
+        .col-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .h-container   {
+            display: flex;
+            width: 100%;
+           
+            flex-direction: column;  
+            
+            h1 {
+              margin: 0;
+            }
+
+
+            @include isLarge {
+              flex-direction: row;
+              justify-content: space-between;
+            }
+          }
+
+
+
+          h2 {
+
+            @include isMedium {
+              margin-bottom: 30px;
+            }
+          }
+
+          .text-container {
+            position: relative;
+
+            .image-g {
+              position: absolute;
+
+              @media screen and (max-width: 500px) {
+                height: 160px;
+              }
+
+              img {
+
+                @media screen and (max-width: 500px) {
+                  width: 100%;
+                  height: 100%;
+                }
+  
+
+              }
+            }
+
+              
+            p {
+              text-align: center;
+              width: 100%;
+              color: $f;
+              
+              margin-top: 20px;
+
+              @include is600 {
+                margin-top: 110px;
+              }
+
+
+              @include isLarge {
+                width: 90%;
+                margin-top: 180px;
+              }
+
+
+              @include isXLarge {
+                width: 75%;
+              }
+
+
+              @include isRetina {
+                width: 65%;
+
+              }
+
+          
+            }
+          }
+
+
+    
+     
+          .btn-container {
+            margin-top: 30px;
+            position: relative;
+            z-index: 999;
+            display: flex;
+          }
+
+        }
+      }
+
+    }
+  }
+
+  
+}
+
+section.sec-hydrafacial {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  min-height: 100vh;
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+    picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 1240px) {
+          // opacity: 0.3;
+        }
+
+        @media screen and (max-width: 992px) {
+          object-position: 70%;
+          opacity: 0.3;
+        }
+ 
+      }
+    }
+          
+  }
+
+
+  .container-fluid {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+    @include isLarge {
+      padding: 0;
+      
+      width: 95%;
+    }
+
+    @include isRetina {
+      width: 90%;
+    }
+   
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+       .col-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 30px;
+
+        @include isLarge {
+          width: 50%;
+          align-items: flex-start;
+        }
+
+        h2 {
+          text-align: center;
+
+          @include isLarge {
+
+            text-align: left;
+          }
+        }
+
+
+   
+
+
+
+        p {
+          
+          width: 100%;
+          text-align: center;
+          padding: 50px 0;
+          margin: 0 auto 0 0;
+       
+          @include isLarge {
+            width: 80%;
+            text-align: left;
+          }
+
+          @include isXLarge {
+            width: 75%;
+          }
+
+          @include isRetina {
+            width: 70%;
+          }
+        }
+
+       }
+      }
+
+    }
+  }
+
+}
+
+section.sec-laser-treatments {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+
+  @include isLarge {
+    margin-top: -75px;
+    padding-bottom: 80px;
+  }
+
+
+  @include isRetina {
+    margin-top: -105px;
+  }
+
+  @include is1700 {
+    margin-top: -130px;
+  }
+
+
+  .container-fluid {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 15px;
+
+    @include isLarge {
+      width: 95%;
+    }
+
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+       .col-item {
+
+        &:nth-child(1) {
+          position: relative;
+          height: 100%;
+
+        @include isLarge {
+          height: 700px; 
+        }
+          
+
+          @include isXLarge {
+            height: 800px; 
+          }
+
+
+          @include isRetina {
+            height: 930px;
+          }
+
+          @include is1700 {
+            height: 100vh;
+          }
+
+
+
+          .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: none;
+            
+            .image-container {
+              width: 100%;
+              height: 100%;
+              position: relative;
+
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                // border-radius: 50px;
+              }
+            }
+
+
+
+            @keyframes fade {
+              0% {opacity: 0;}
+              50% {opacity: 1;}
+              100% {opacity: 1;}
+            }
+
+            &.active {
+              display: flex;
+              opacity: 1;
+              animation-name: fade;
+              animation-duration: 1s;
+              animation-timing-function: ease-in-out;
+            }
+          }
+
+        }
+
+
+
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          padding: 50px 20px ;
+          background-color: #F8F8F8;
+          box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.2);
+
+          @include isLarge {
+            width: 35%;
+            padding: 100px 20px 40px;
+            height: 630px;
+          }
+
+          @include isXLarge {
+            padding: 100px 25px 40px;
+            height: 750px;
+          }
+
+
+
+
+
+          @include isRetina {
+            padding: 100px 30px 40px;
+            height: 900px;
+          }
+
+          @include is1700 {
+            padding: 150px 35px 40px;
+          }
+
+
+          .text-container {
+            position: relative;
+
+            width: 100%;
+
+  
+            h2 {
+              color: $color-secondary;
+              
+              
+            }
+
+            h3 {
+              color: $b;
+            }
+  
+  
+          }
+
+
+          p {
+            
+            width: 100%;
+            text-align: center;
+            
+
+            
+            @include isLarge {
+              width: 95%;
+              // margin-top: 100px;
+              margin: 50px auto 50px 0;
+              text-align: left;
+
+            }
+
+  
+          }
+
+
+          .swiper-container {
+            width: 100%;
+            height: 130px;
+            // margin-top: 100px;
+
+            @include isLarge {
+              width: 100%;
+            }
+
+            @include isRetina {
+              margin-top: 100px;
+            }
+      
+            .swiper-slide {
+              text-align: center;
+              font-size: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+      
+              .content-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+      
+      
+                .u-list {
+                  width: 100%;
+                  margin-top: 20px;
+              
+                  ul {
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: flex-start;
+      
+                    @include isLarge {
+                      flex-direction: row;
+                    }
+      
+                   
+      
+                    li {
+                      margin: 0 40px;
+                      list-style: none;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      
+                      a {
+                        color: $b;
+                        font-size: 0.9375rem;
+                        font-weight: 400;
+                        font-family: $font-primary;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        line-height: 1.3;
+
+                        @include isLarge {
+
+                          // padding: 0 30px;
+                        }
+      
+    
+                        @include is1700 {
+                          font-size: 1rem;
+                        }
+                      }
+    
+                    }
+                    
+                  }
+                }
+              }
+            }
+      
+      
+            /* Custom styles for the prev and next buttons */
+            .swiper-button-prev,
+            .swiper-button-next {
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top: 55%;
+              width: auto;
+              height: auto;
+              margin-top: -20px;
+              padding: 10px;
+              color: #fff;
+              font-size: 30px;
+              font-weight: bold;
+              text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+              cursor: pointer;
+              border-radius: 50%;
+
+              @include isRetina {
+                height: 55px;
+                width: 55px;
+              }
+      
+              &::after {
+                display: none;
+              }
+      
+              &:hover {
+                opacity: 0.6;
+              }
+              border: 2px solid $b;
+            }
+      
+            .swiper-button-prev {
+              left: 1px;
+              // transform: rotate(180deg);
+            }
+      
+            .swiper-button-next {
+              right: 1px;
+            }
+
+            .swiper-pagination {
+              bottom: 0;
+            }
+
+
+            span.swiper-pagination-bullet {
+              width: 100px;
+              border-radius: 0;
+              height: 7px;
+              background-color: transparent;
+              border: 2px solid $color-main;
+              opacity: 1;
+            }
+
+            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+              background-color: $color-main;
+            }
+
+          }
+
+
+          
+
+  
+        }
+
+
+
+        &:nth-child(3) {
+          background-color: $color-main;
+          position: relative;
+          height: 100%;
+          padding: 50px 20px 50px;
+
+          @include isLarge {
+            padding: 60px 25px 60px;
+            height: 550px;
+          }
+
+          @include isXLarge {
+            padding: 80px 25px 80px;
+            height: 650px;
+          }
+
+          @include isRetina {
+            padding: 100px 25px 100px;
+            height: 720px
+          }
+
+          .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: none;
+            
+
+
+            .text-container {
+              position: relative;
+  
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+              justify-content: center;
+              
+      
+
+
+              h3 {
+                color: $f;
+                
+                @include isLarge {
+              
+                  text-align: left
+                }
+
+              }
+
+              p {
+                color: $f;
+                width: 100%;
+                text-align: center;
+                padding: 0 15px;
+            
+
+                @include isLarge {
+                  width: 80%;
+                  text-align: left;
+                  margin: 50px auto 50px 0;
+                }
+
+                @include isLarge {
+                  width: 80%;
+                }
+              }
+
+
+              .btn-container {
+                width: 100%;
+                margin-top: 50px;
+              }
+    
+    
+            }
+
+
+            @keyframes fade {
+              0% {opacity: 0;}
+              50% {opacity: 1;}
+              100% {opacity: 1;}
+            }
+
+            &.active {
+              display: flex;
+              opacity: 1;
+              animation-name: fade;
+              animation-duration: 1s;
+              animation-timing-function: ease-in-out;
+            }
+          }
+
+        }
+
+       }
+      }
+
+    }
+  }
+
+}
+
+section.sec-about {
+  background-color: #F4F4F4;
+
+
+  .container-fluid {
+    padding: 0;
+
+    .content {
+
+      .col-container {
+        .col-item {
+
+          &:nth-child(1) {
+            padding: 80px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include isLarge {
+              padding: 100px 50px;
+            }
+
+            p {
+              text-align: center;
+
+              @include isLarge {
+                width: 90%;
+              }
+
+              @include isXLarge {
+                width: 80%;
+              }
+
+              @include isRetina {
+                width: 75%;
+              }
+
+              @include is1700 {
+                width: 60%;
+              }
+            }
+
+            h2 {
+              font-family: $font-secondary;
+              color: $color-third;
+              font-weight: 600;
+              font-size: 1.25rem;
+              margin-bottom: 20px;
+
+              @include isLarge {
+                font-size: 1.5rem;
+              }
+
+              @include isXLarge {
+                font-size: 1.875rem;
+              }
+
+              @include isRetina {
+                font-size: 2.1875rem;
+              }
+            }
+
+
+            .btn-container {
+              margin-top: 50px;
+              width: 100%;
+              justify-content: center;
+              gap: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.sec-wellness-treatments {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+
+  .container-fluid {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 15px;
+
+    @include isLarge {
+      width: 95%;
+    }
+
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+       .col-item {
+
+        &:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          padding: 50px 20px ;
+          background-color: #F8F8F8;
+          box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.2);
+
+          @include isLarge {
+            width: 35%;
+            padding: 100px 20px 40px;
+            height: 630px;
+          }
+
+          @include isXLarge {
+            padding: 100px 25px 40px;
+            height: 750px;
+          }
+
+
+
+
+
+          @include isRetina {
+            padding: 100px 30px 40px;
+            height: 900px;
+          }
+
+          @include is1700 {
+            padding: 150px 35px 40px;
+          }
+
+
+          .text-container {
+            position: relative;
+
+            width: 100%;
+
+  
+            h2 {
+              color: $color-secondary;
+            }
+
+            h3 {
+              color: $b;
+            }
+  
+  
+          }
+
+
+          p {
+            
+            width: 100%;
+            text-align: center;
+            
+
+            
+            @include isLarge {
+              width: 95%;
+              margin: 50px auto 50px 0;
+              text-align: left;
+
+            }
+
+  
+          }
+
+
+          .swiper-container {
+            width: 100%;
+            height: 130px;
+
+            @include isLarge {
+              width: 100%;
+            }
+
+            @include isRetina {
+              margin-top: 100px;
+            }
+      
+            .swiper-slide {
+              text-align: center;
+              font-size: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+      
+              .content-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+      
+      
+                .u-list {
+                  width: 100%;
+                  margin-top: 20px;
+              
+                  ul {
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: flex-start;
+      
+                    @include isLarge {
+                      flex-direction: row;
+                    }
+      
+                   
+      
+                    li {
+                      margin: 0 40px;
+                      list-style: none;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      
+                      a {
+                        color: $b;
+                        font-size: 0.9375rem;
+                        font-weight: 400;
+                        font-family: $font-primary;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        line-height: 1.3;
+
+      
+    
+                        @include is1700 {
+                          font-size: 1rem;
+                        }
+                      }
+    
+                    }
+                    
+                  }
+                }
+              }
+            }
+      
+      
+            /* Custom styles for the prev and next buttons */
+            .swiper-button-prev,
+            .swiper-button-next {
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top: 55%;
+              width: auto;
+              height: auto;
+              margin-top: -20px;
+              padding: 10px;
+              color: #fff;
+              font-size: 30px;
+              font-weight: bold;
+              text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+              cursor: pointer;
+              border-radius: 50%;
+
+              @include isRetina {
+                height: 55px;
+                width: 55px;
+              }
+      
+              &::after {
+                display: none;
+              }
+      
+              &:hover {
+                opacity: 0.6;
+              }
+              border: 2px solid $b;
+            }
+      
+            .swiper-button-prev {
+              left: 1px;
+              // transform: rotate(180deg);
+            }
+      
+            .swiper-button-next {
+              right: 1px;
+            }
+
+            .swiper-pagination {
+              bottom: 0;
+            }
+
+
+            span.swiper-pagination-bullet {
+              width: 100px;
+              border-radius: 0;
+              height: 7px;
+              background-color: transparent;
+              border: 2px solid $color-main;
+              opacity: 1;
+            }
+
+            span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+              background-color: $color-main;
+            }
+
+          }
+
+
+          
+
+  
+        }
+
+
+        &:nth-child(2) {
+          background-color: $color-fourth;
+          position: relative;
+          height: 100%;
+          padding: 50px 15px 50px;
+
+          @include isLarge {
+            padding: 60px 20px 60px;
+            height: 550px;
+          }
+
+          @include isXLarge {
+            padding: 80px 25px 80px;
+            height: 650px;
+          }
+
+          @include isRetina {
+            padding: 100px 25px 100px;
+            height: 720px
+          }
+
+          .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: none;
+            
+
+
+            .text-container {
+              position: relative;
+  
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+              justify-content: center;
+              
+      
+
+
+              h3 {
+                color: $f;
+                
+                @include isLarge {
+              
+                  text-align: left
+                }
+
+              }
+
+              p {
+                color: $f;
+                width: 100%;
+                text-align: center;
+                padding: 0 15px;
+            
+
+                @include isLarge {
+                  width: 80%;
+                  text-align: left;
+                  margin: 50px auto 50px 0;
+                }
+
+                @include isLarge {
+                  width: 80%;
+                }
+              }
+
+
+              .btn-container {
+                width: 100%;
+                margin-top: 50px;
+              }
+    
+    
+            }
+
+
+            @keyframes fade {
+              0% {opacity: 0;}
+              50% {opacity: 1;}
+              100% {opacity: 1;}
+            }
+
+            &.active {
+              display: flex;
+              opacity: 1;
+              animation-name: fade;
+              animation-duration: 1s;
+              animation-timing-function: ease-in-out;
+            }
+          }
+
+        }
+
+
+        &:nth-child(3) {
+          position: relative;
+          height: 100%;
+
+        @include isLarge {
+          height: 700px; 
+        }
+          
+
+          @include isXLarge {
+            height: 800px; 
+          }
+
+
+          @include isRetina {
+            height: 930px;
+          }
+
+          @include is1700 {
+            height: 100vh;
+          }
+
+
+
+          .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: none;
+            
+            .image-container {
+              width: 100%;
+              height: 100%;
+              position: relative;
+
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                // border-radius: 50px;
+              }
+            }
+
+
+
+            @keyframes fade {
+              0% {opacity: 0;}
+              50% {opacity: 1;}
+              100% {opacity: 1;}
+            }
+
+            &.active {
+              display: flex;
+              opacity: 1;
+              animation-name: fade;
+              animation-duration: 1s;
+              animation-timing-function: ease-in-out;
+            }
+          }
+
+        }
+
+       }
+      }
+
+    }
+  }
+
+}
+
+section.sec-cosmetic-injections {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+
+  @include isLarge {
+    min-height: 900px;  
+  }
+
+  @include isRetina {
+    min-height: 1000px;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+
+
+    picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      
+
+      &::after {
+        content: close-quote;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: -moz-radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
+        background: radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#0a0a0a",GradientType=1);
+        opacity: .9;
+        height: 100%;
+
+      }
+
+      @include isLarge {
+
+        &::after {
+          display: none;
+        }
+      }
+
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 1240px) {
+          // opacity: 0.3;
+        }
+
+        @media screen and (max-width: 700px) {
+          object-position: 35%;
+          // opacity: 0.3;
+        }
+ 
+      }
+    }
+          
+  }
+
+
+  .container-fluid {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+    @include isLarge {
+      padding: 0;
+      
+      width: 95%;
+    }
+
+    @include isRetina {
+      width: 90%;
+    }
+   
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include isLarge {
+          justify-content: flex-start;
+        }
+
+       .col-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px;
+        margin-top: 75px;
+
+        @include isLarge {
+          margin-top: 150px;
+          margin: 0 30px;
+        }
+
+        h2 {
+          text-align: center;
+          color: $f;
+    
+        }
+
+
+
+        p {
+          color: $f;
+          width: 100%;
+          text-align: center;
+          padding: 50px 0;
+          margin: 0 0 0 auto;
+       
+          @include isLarge {
+            width: 60%;
+            text-align: left;
+          }
+
+          @include isXLarge {
+            width: 55%;
+          }
+
+          @include isRetina {
+            width: 50%;
+          }
+
+          @include is1500 {
+            width: 45%;
+          }
+
+          @include is1700 {
+            width: 40%;
+          }
+        }
+
+
+        .btn-container {
+          margin: 0 0 0 auto;
+          margin-top: 30px;
+
+          @include isLarge {
+            width: 60%;
+
+          }
+
+          @include isXLarge {
+            width: 55%;
+          }
+
+          @include isRetina {
+            width: 50%;
+          }
+
+          
+          @include is1500 {
+            width: 45%;
+          }
+
+          @include is1700 {
+            width: 43%;
+          }
+        }
+
+       }
+      }
+
+    }
+  }
+
+}
+
+section.sec-dermal-fillers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  
+  @include isLarge {
+    min-height: 900px;
+  }
+ 
+
+  @include isRetina {
+    min-height: 1000px;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+    picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
+        object-fit: cover;
+        object-position: left;
+        height: 100%;
+        width: 100%;
+
+        @media screen and (max-width: 1240px) {
+          opacity: 0.3;
+        }
+
+        @media screen and (max-width: 700px) {
+              object-position: 10%;
+        }
+ 
+      }
+    }
+          
+  }
+
+
+  .container-fluid {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+    @include isLarge {
+      padding: 0;
+    }
+
+    @include isRetina {
+      width: 90%;
+    }
+   
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include isLarge {
+          justify-content: flex-end;
+        }
+
+       .col-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px;
+        margin-top: 75px;
+
+        @include isLarge {
+          width: 45%;
+          margin-top: 150px;
+          margin: 0 30px;
+          
+        }
+
+        @include is1500 {
+          width: 40%;
+        }
+
+        @include is1700 {
+          width: 37%;
+        }
+
+
+        .h-container {
+          width: 100%;
+
+          h2 {
+            text-align: center;
+            color: $color-third;
+            margin: 0;
+            // margin-bottom: 30px;
+     
+
+            &:nth-child(1) {
+              text-align: center;
+
+              @include isLarge {
+                text-align: left;
+              }
+            }
+            &:nth-child(2) {
+              text-align: center;
+
+              @include isLarge {
+                text-align: right;
+              }
+            }
+
+
+            @include isLarge {
+              font-size: 3rem;
+              // letter-spacing: 1rem;
+              letter-spacing: 5px;
+              text-align: left;
+            }
+        
+            @include isXLarge {
+              font-size: 3.5rem;
+            }
+          
+            @include isRetina {
+              font-size: 3.75rem; 
+            }
+        
+            @include is1500 {
+              font-size: 3.75rem; 
+            }
+        
+        
+            @include is1700 {
+              font-size: 3.75rem; 
+              letter-spacing: 10px;
+        
+            }
+          }
+  
+
+        }
+
+
+   
+
+
+
+        p {
+          width: 100%;
+          text-align: center;
+          padding: 50px 0;
+          margin: 0 0 0 auto;
+       
+          @include isLarge {
+            width: 90%;
+            text-align: left;
+          }
+
+          @include isXLarge {
+            width: 85%;
+          }
+
+          @include isRetina {
+            width: 85%;
+          }
+
+          @include is1500 {
+            width: 80%;
+          }
+
+
+          @include is1700 {
+            width: 80%;
+          }
+
+        }
+
+
+        .btn-container {
+          margin: 0 0 0 auto;
+          margin-top: 30px;
+
+          @include isLarge {
+            width: 90%;
+
+          }
+
+          @include isXLarge {
+            width: 85%;
+          }
+
+          @include isRetina {
+            width: 85%;
+          }
+
+          
+          @include is1500 {
+            width: 80%;
+          }
+
+          @include is1700 {
+            width: 80%;
+          }
+        }
+
+
+
+
+
+
+       }
+      }
+
+    }
+  }
+
+}
+
+
+section.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 50px;
+  margin-top: 50px;
+
+
+  @include isLarge {
+    padding: 80px 0;
+    min-height: 900px;
+  }
+
+  @include isRetina {
+    min-height: 100vh;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    
+
+
+    picture {
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+          
+  
+  }
+
+
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+   
+    
+    @include isLarge {
+      flex-direction: row;
+      width: 90%;
+      padding: 0;
+    }
+
+  
+
+    .formcontent {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      border-radius: 80px;
+
+      @include isLarge {
+        flex-direction: row;
+      }
+
+  
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        width: 100%;
+
+   
+
+
+        .content {
+          width: 100%;
+          display: flex;
+         
+          align-content: center;
+          justify-content: flex-start;
+          text-align: center;
+          flex-direction: column;
+
+          @include isLarge {
+            flex-direction: row;
+          }
+
+
+          .col-item {
+
+
+
+              &:nth-child(1) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+
+                @include isLarge {
+                  width: 60%;
+                  margin: 0;
+                  align-items: flex-start;
+                }
+
+
+                h2 {
+  
+                  margin-bottom: 0;
+                  line-height: 1.4;
+
+                }
+                    
+                p {
+                  width: 100%;
+                  text-align: center;
+               
+                  @include isLarge {
+                    margin: 50px auto 50px 0;
+                    width: 80%;
+                    text-align: left;
+                  }
+                  
+
+
+                  @include isXLarge {
+                    width: 75%;
+                  }
+
+                  @include isRetina {
+                    width: 70%;
+                   
+                  }
+         
+
+              
+                  a {
+     
+                    color: $b;
+                    &:hover {
+                      opacity: 0.5;
+                    }
+
+
+                  }
+                }
+
+                .btn-container {
+                  margin-top: 30px;
+                }
+
+                form {
+                  width: 
+                  100%;
+                  margin: 50px auto 0;
+                  padding: 0;
+                  
+                  @include isLarge {
+              
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0 50px;
+                  }
+
+                  @include isXLarge {
+                    margin-top: 0;
+                  }
+
+                  @include isRetina {
+                    padding: 0 80px;
+                  }
+    
+                  
+                }
+          
+                .formpwrap {
+                  display: flex;
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  margin: 0 auto;
+
+         
+              
+                  .input {
+                    width: 100%;
+                    padding: 10px;
+                  
+          
+          
+                    @include isMedium {
+                      width: 100%;
+                    }
+
+                    @include isXLarge {
+                      width: 50%;
+                      margin-top: 30px;
+                    }
+    
+                    label {
+                      display: none;
+                    }
+    
+    
+                    input, select {
+              
+                      &:focus {
+                        box-shadow: none;
+                      }
+                    }
+                  }
+                }
+    
+          
+                button.ui-btn {
+                  border: none;
+                  margin-bottom: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 50px auto 0;
+
+                  &:hover {
+                    opacity: 0.5;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    transform: scale(0.95);
+                    opacity: 0.5;
+                  }
+
+                  
+          
+                }
+              }
+
+
+              &:nth-child(2) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 30px;
+
+                @include isLarge {
+                  width: 40%;
+                  padding: 0 50px;
+                }
+
+                .image-container {
+                  width: 100%;
+
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 200px;
+                    border: 1px solid #CCCCCC;
+
+                    @include isLarge {
+                      border-radius: 225px;
+                    }
+
+                    @include isXLarge {
+                      border-radius: 275px;
+                    }
+                    
+
+                    @include isRetina {
+                      border-radius: 320px;
+                    }
+                  }
+                }
+
+              }
+
+            }
+
+          }
+
+      }
+    }
+  }
+}

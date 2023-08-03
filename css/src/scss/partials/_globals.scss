@@ -1,0 +1,29 @@
+.container-fluid{
+  max-width: 100%;
+  
+  @media screen and (max-width: 992px) {
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.col-container {
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include isLarge {
+    flex-direction: row;
+  }
+
+  .col-item {
+    width: 100%;
+    
+  }
+}

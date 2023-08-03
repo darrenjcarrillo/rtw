@@ -1,0 +1,155 @@
+// Request Appointment Form
+
+// Input styles
+@mixin selectStyles {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  text-align: left;
+  box-shadow: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  height: auto;
+  border: none;
+  // background-color: $f;
+  line-height: 20px;
+
+  font-size: 0.875rem;
+  letter-spacing: 0em;
+  background-color: #F5F4E9;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  // border-bottom: 2px solid $b;
+  // border-radius: 30px;
+  padding: 15px 30px;
+  color: $color-main;
+
+
+
+}
+
+@mixin placeholderText {
+  color: $color-main;
+  font-style: normal;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  font-size: 0.875rem;
+  letter-spacing: 0em;
+  line-height: 1.875;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  
+
+  @include is1500 {
+    font-size: 1rem;
+  }
+}
+
+input.form-control {
+  @include selectStyles;
+
+  
+  &::placeholder {
+    @include placeholderText;
+  }
+
+  &:hover {
+
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #F5F4E9;
+    // border-color: $color-secondary;
+
+    // border-bottom: 2px solid $color-secondary;
+  }
+  line-height: 1.5;
+  
+  @include is1500 {
+    font-size: 1rem;
+    // line-height: 45px;
+  }
+
+  color: $color-main;
+  font-weight: bold;
+  // background-color: $f;
+  // border: 1px solid #7E7E7E;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px;
+}
+
+select.form-control {
+  background: transparent
+    url("../../../../img/right-arrow.svg")
+    no-repeat right 1.5rem center/20px 20px;
+  @include selectStyles;
+
+  // border-radius: 30px;
+
+  text-transform: uppercase;
+
+
+  option {
+    text-transform: uppercase;
+  }
+
+  &::placeholder {
+    @include placeholderText;
+
+    font-size: 1rem;
+    
+  }
+
+
+  &:hover {
+
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #F5F4E9;
+    // border-color: $color-secondary;
+    // border-bottom: 2px solid $color-secondary;
+  }
+
+  color: $color-main;
+  font-size: 1rem;
+  background-color: #F5F4E9;
+
+  // border: 1px solid #7E7E7E;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px;
+}
+
+textarea.form-control {
+  @include selectStyles;
+
+  &::placeholder {
+    @include placeholderText;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 11px 7px rgba(0, 0, 0, 0.11);
+    color: #515252;
+  
+    &::placeholder {
+      color: #515252;
+    }
+  }
+
+ 
+
+}
