@@ -242,6 +242,12 @@ h6 {
   &:first-child {
     margin-top: 0;
   }
+
+
+  sup {
+    font-size: 45%;
+    top: -0.9em;
+  }
 }
 .txtupp {
   text-transform: uppercase;
@@ -354,11 +360,9 @@ h2 {
       font-size: 5rem;
       
     }
-  
-  
- 
 
- 
+  
+  
   
   }
 

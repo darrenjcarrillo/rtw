@@ -404,6 +404,121 @@ section.sec-col-main {
 
 }
 
+section.sec-about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  // min-height: 100vh;
+  overflow: hidden;
+
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    z-index: 1;
+    // border-radius: 0 0 100px 100px;
+    align-items: center;
+    justify-content: center;
+
+    picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+
+          
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 1240px) {
+          // opacity: 0.3;
+        }
+
+        @media screen and (max-width: 700px) {
+          object-position: center;
+          // opacity: 0.3;
+        }
+ 
+      }
+    }
+          
+  }
+
+  .container-fluid {
+    padding: 0;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include isLarge {
+      width: 95%;
+    }
+
+    .content {
+
+      .col-container {
+        display: flex;
+        justify-content: flex-start;
+        height: 100vh;
+
+        @include is1700 {
+          max-height: 995px;
+        }
+
+
+        .col-item {
+          width: 50%;
+          
+
+          h2 {
+            color: $color-secondary;
+          }
+
+  
+        }
+
+
+        &:nth-child(2) {
+          justify-content: flex-end;
+          
+
+          .col-item {
+            width: 55%;
+
+            h2 {
+              color: $color-main;
+            }
+
+            .text-container {
+              padding-left: 100px;
+
+              p {
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+
+      
+    }
+  }
+}
+
 section.sec-laser-treatments {
   position: relative;
   display: flex;
@@ -850,82 +965,7 @@ section.sec-laser-treatments {
 
 }
 
-section.sec-about {
-  background-color: #F4F4F4;
 
-
-  .container-fluid {
-    padding: 0;
-
-    .content {
-
-      .col-container {
-        .col-item {
-
-          &:nth-child(1) {
-            padding: 80px 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            @include isLarge {
-              padding: 100px 50px;
-            }
-
-            p {
-              text-align: center;
-
-              @include isLarge {
-                width: 90%;
-              }
-
-              @include isXLarge {
-                width: 80%;
-              }
-
-              @include isRetina {
-                width: 75%;
-              }
-
-              @include is1700 {
-                width: 60%;
-              }
-            }
-
-            h2 {
-              font-family: $font-secondary;
-              color: $color-third;
-              font-weight: 600;
-              font-size: 1.25rem;
-              margin-bottom: 20px;
-
-              @include isLarge {
-                font-size: 1.5rem;
-              }
-
-              @include isXLarge {
-                font-size: 1.875rem;
-              }
-
-              @include isRetina {
-                font-size: 2.1875rem;
-              }
-            }
-
-
-            .btn-container {
-              margin-top: 50px;
-              width: 100%;
-              justify-content: center;
-              gap: 40px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 section.sec-wellness-treatments {
   position: relative;

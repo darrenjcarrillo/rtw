@@ -130,6 +130,17 @@
     }
   }
 
+  &.ui-btn-line-beige {
+    padding: 15px 35px;
+    color: $color-secondary;
+    border: 3px solid $color-secondary;
+    // background-color: transparent;
+
+    &::after {
+      background-color: transparent;
+    }
+  }
+
 
 
 
