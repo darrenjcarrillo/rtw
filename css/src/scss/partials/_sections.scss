@@ -214,14 +214,16 @@ section.welcome {
   
 }
 
-section.sec-hydrafacial {
+section.sec-col-main {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  padding: 160px 0 100px;
   min-height: 100vh;
+  margin-top: -100px;
+  z-index: 0;
 
   .img {
     position: absolute;
@@ -308,41 +310,92 @@ section.sec-hydrafacial {
           align-items: flex-start;
         }
 
-        h2 {
-          text-align: center;
+        &:nth-child(1) {
+          width: 45%;
 
-          @include isLarge {
+          .image-container {
 
-            text-align: left;
+            img {
+              border-radius: 393px 393px 0 0;
+
+            }
           }
         }
 
-
-   
-
-
-
-        p {
+        &:nth-child(2) {
+          padding-left: 50px;
           
-          width: 100%;
-          text-align: center;
-          padding: 50px 0;
-          margin: 0 auto 0 0;
-       
-          @include isLarge {
-            width: 80%;
-            text-align: left;
+          h2 {
+            text-align: center;
+
+            @include isLarge {
+
+              text-align: left;
+            }
           }
 
-          @include isXLarge {
-            width: 75%;
+
+          p {
+            
+            width: 100%;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0 auto 0 0;
+        
+            @include isLarge {
+              width: 80%;
+              text-align: left;
+            }
+
+            @include isXLarge {
+              width: 75%;
+            }
+
+            @include isRetina {
+              width: 70%;
+            }
           }
 
-          @include isRetina {
-            width: 70%;
-          }
         }
 
+       }
+
+       &:nth-child(2) {
+        .col-item {
+       
+
+          &:nth-child(2) {
+            // position: absolute;
+            // right: 0;
+            position: relative;
+            right: -120px;
+            margin: 0;
+            padding: 0;
+
+
+            // img {}
+          }
+
+          &:nth-child(1) {
+            // padding-left: 50px;
+  
+            p {
+              
+              width: 100%;
+              text-align: center;
+              padding: 50px 0;
+              margin: 0 auto 0 0;
+          
+              @include isLarge {
+                width: 80%;
+                text-align: left;
+              }
+  
+   
+            }
+  
+          }
+        }
        }
       }
 

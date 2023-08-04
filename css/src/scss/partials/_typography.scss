@@ -317,45 +317,44 @@ h2 {
     font-weight: normal;
     margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: bold;
     text-align: center;
-    letter-spacing: 4px;
+    // letter-spacing: 4px;
     line-height: 1;
-    color: $color-main;
+    color: $f;
     margin-bottom: 0;
     font-size: 2.2rem;
     text-align: center;
-    
+
     @include isSmall {
       font-size: 3rem;
-      letter-spacing: 7px;
     }
 
+    @include isMedium {
+      font-size: 3rem;
+    }
+
+  
     @include isLarge {
-      font-size: 2.3rem;
-      // letter-spacing: 1rem;
-      letter-spacing: 5px;
+      font-size: 3.75rem;
       text-align: left;
     }
 
     @include isXLarge {
-      font-size: 2.3rem;
+      font-size: 4rem;
+     
     }
   
     @include isRetina {
-      font-size: 2.875rem;
+      font-size: 4.375rem;
+     
     }
-
-    @include is1500 {
-      font-size: 3rem;
-    }
-
 
     @include is1700 {
-      font-size: 3.75rem; 
-      letter-spacing: 10px;
-
+      font-size: 5rem;
+      
     }
+  
   
  
 

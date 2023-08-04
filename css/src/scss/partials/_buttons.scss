@@ -2,14 +2,10 @@
 
 .btn-container {
   display: flex;
-  // align-items: center;
   gap: 20px;
-
-  // background-color: transparent;
 
   @media screen and (max-width: 992px) {
     flex-direction: column;
-    // align-items: center;
   }
 }
 
@@ -55,7 +51,7 @@
   }
 
   &:hover {
-    color: $f;
+    color: rgba($f, 0.5);
     text-decoration: none;
     &:before {
       width: 100%;
@@ -72,7 +68,7 @@
 
 
 
-  &.ui-btn-line {
+  &.ui-btn-line-main {
     
     border: 3px solid $f;
     
@@ -88,9 +84,49 @@
     }
 
     &:hover {
-      color: $f;
+      color: rgba($f, 0.5);
       // border: 3px solid $f;
       transition: all  0.3s;
+    }
+  }
+
+
+  &.ui-btn-line {
+    padding: 15px 35px;
+    border: 3px solid $f;
+    
+    &::after {
+      background-color: transparent;
+      // border: 3px solid $f;
+    }
+    
+    &::before {
+      background: $f;
+      background-color: $color-main;
+      // border: 3px solid $b;
+    }
+
+    &:hover {
+      color: rgba($f, 0.5);
+      // border: 3px solid $f;
+      transition: all  0.3s;
+    }
+  }
+
+  &.ui-btn-white {
+
+    color: $b;
+
+    &::before {
+      
+    }
+
+    &::after {
+      background-color: $f;
+    }
+
+    &:hover {
+      color: rgba($f, 0.5);
     }
   }
 
