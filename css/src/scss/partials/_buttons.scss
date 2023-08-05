@@ -12,10 +12,13 @@
 // main button container
 
 .ui-btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px 50px;
   border-radius: 10rem;
   color: $f;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 1rem;
   transition: all .3s;
@@ -25,37 +28,38 @@
   text-decoration: none;
   font-family: $font-primary;
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-main;
-    border-radius: 10rem;
-    z-index: -2;
-  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: $color-main;
+  //   border-radius: 10rem;
+  //   z-index: -2;
+  // }
 
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: darken($color-main, 15%);
-    transition: all .3s;
-    border-radius: 10rem;
-    z-index: -1;
-  }
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   width: 0%;
+  //   height: 100%;
+  //   background-color: $color-main;
+  //   transition: all .3s;
+  //   border-radius: 10rem;
+  //   z-index: -1;
+  // }
 
   &:hover {
-    color: rgba($f, 0.5);
     text-decoration: none;
-    &:before {
-      width: 100%;
-    }
+    opacity: 0.7;
+    transform: scale(0.95);
+    color: $b;
+
+    transition: all .3s;
   }
 
   @include isLarge {
@@ -67,27 +71,16 @@
   }
 
 
+  &.ui-btn-brown {
+    background-color: $color-main;
+  }
+
+
 
   &.ui-btn-line-main {
     
     border: 3px solid $f;
     
-    &::after {
-      background-color: transparent;
-      // border: 3px solid $f;
-    }
-    
-    &::before {
-      background: $f;
-      background-color: $color-main;
-      // border: 3px solid $b;
-    }
-
-    &:hover {
-      color: rgba($f, 0.5);
-      // border: 3px solid $f;
-      transition: all  0.3s;
-    }
   }
 
 
@@ -95,50 +88,36 @@
     padding: 15px 35px;
     border: 3px solid $f;
     
-    &::after {
-      background-color: transparent;
-      // border: 3px solid $f;
-    }
-    
-    &::before {
-      background: $f;
-      background-color: $color-main;
-      // border: 3px solid $b;
-    }
-
-    &:hover {
-      color: rgba($f, 0.5);
-      // border: 3px solid $f;
-      transition: all  0.3s;
-    }
   }
 
   &.ui-btn-white {
-
+    background-color: $f;
     color: $b;
 
-    &::before {
-      
-    }
 
-    &::after {
-      background-color: $f;
-    }
-
-    &:hover {
-      color: rgba($f, 0.5);
-    }
   }
 
   &.ui-btn-line-beige {
     padding: 15px 35px;
-    color: $color-secondary;
     border: 3px solid $color-secondary;
-    // background-color: transparent;
+    background-color: transparent;
+    color: $color-secondary;
 
-    &::after {
-      background-color: transparent;
+    &:hover {
+      color: $b;
+
     }
+ 
+  }
+
+  &.ui-btn-dark {
+    background-color: $color-third;
+
+    &:hover {
+      color: $f;
+
+    }
+
   }
 
 
@@ -147,3 +126,38 @@
 }
 
 
+.toggle-button {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin-top: 50px;
+  margin: 50px 0 0 auto;
+  color: $color-secondary;
+
+  span.icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid $color-secondary;
+
+    svg {
+      width: 30px;
+      height: 25px;
+    }
+  }
+
+  &:hover {
+    transform: scale(0.95);
+    transition: all .3s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

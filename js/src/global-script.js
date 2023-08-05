@@ -294,5 +294,15 @@ document.onscroll = function() {
   }
 }
 
-// SLIDER -------------------------------------------
+// Injectables section Toggle
+const toggleButtons = document.querySelectorAll('.toggle-button');
+const divContainer1 = document.querySelector('.div-container-1');
+const divContainer2 = document.querySelector('.div-container-2');
+
+toggleButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    divContainer1.classList.toggle('active');
+    divContainer2.classList.toggle('active');
+  });
+});
 
