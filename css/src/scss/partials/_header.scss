@@ -205,22 +205,19 @@
 		justify-content: center;
 		position: relative;
 		margin: 0 auto;
-		// background-color: $color-main;
 
-		// padding-top: 10px;
-		// padding: 10px 15px 0 ;
-		
 
 		@include isLarge {
 			flex-direction: column;
-			// padding: 10px 0 20px;
-			// padding: 10px 0 0 0 ;
+
+			padding-top: 10px;
 			max-width: 98%;
 		}
 
 
 		@include isXLarge {
 			flex-direction: row;
+			padding-top: 0;
 		}
 
 		
@@ -268,7 +265,7 @@
 
 			figure.logo {
 				margin: 0;
-				width: 300px;
+				width: 100px;
 
 				@media screen and (max-width: 1200px) {
 				}
@@ -552,21 +549,27 @@
 
 				@include isLarge {
 					align-items: center;
-					padding-bottom: 25px;
+					// padding-top: 10px;
 				}
 
 				@include is1100 {
 					// padding-top: 10px;
 					// padding-bottom: 10px;
+					
 				}
 
 				@include isXLarge {
 					padding-left: 30px;
+					padding-bottom: 25px;
 					// justify-content: flex-start;	
 				}
 
 				@include isRetina {
-					// padding-left: 100px;
+					padding-left: 100px;
+				}
+
+				@include is1700 {
+					padding-left: 150px;
 				}
 
 				@media screen and (max-width: 992px) {
@@ -742,23 +745,23 @@
 						text-align: center;
 						text-transform: uppercase;
 						font-weight: 600;
-						font-size: 0.9375rem;
+						font-size: 1rem;
 						color: $b;
 
 						display: flex;
 
 						@media screen and (max-width: 1700px) {
 							margin: 0 25px;
-							font-size: 0.875rem;
+							font-size: 0.9375rem;
 						}
 
 						@media screen and (max-width: 1500px) {
 							margin: 0 20px;
-							font-size: 0.875rem;
+							font-size: 0.9375rem;
 						}
 
 						@media screen and (max-width: 1450px) {
-							font-size: 0.75rem;
+							font-size: 0.9375rem;
 							margin: 0 15px;
 						}
 
@@ -770,7 +773,7 @@
 
             @media screen and (max-width: 1250px) {
 							line-height: 1.2;
-							font-size: 0.75rem;
+							font-size: 0.875rem;
 						}
 
 						@media screen and (max-width: 1080px) {
