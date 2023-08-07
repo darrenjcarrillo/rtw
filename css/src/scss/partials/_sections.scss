@@ -8,7 +8,10 @@ section.welcome {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  // border-radius: 0 0 100px 100px;
+
+  @include isLarge {
+    align-items: flex-end;
+  }
 
   @include isRetina {
     min-height: 1080px;
@@ -45,7 +48,8 @@ section.welcome {
         background: -webkit-radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
         background: radial-gradient(circle, rgba(0,0,0,0.3925945378151261) 0%, rgba(10,10,10,0.20772058823529416) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#0a0a0a",GradientType=1);
-        opacity: .9;
+        border-radius: 0 0 60px 60px;
+        // opacity: .9;
         height: 100%;
 
       }
@@ -137,17 +141,22 @@ section.welcome {
 
           &:nth-child(2) {
             align-items: flex-end;
-            margin-bottom: 80px;    
+            margin-bottom: 50px;    
+
+            @include isLarge {
+              margin-bottom: 80px;    
+            }
 
           .text-container {
             position: relative;
-            width: 50%;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
 
             @include isLarge {
               width: 60%;
+              align-items: flex-start;
             }
 
             @include isXLarge {
@@ -163,24 +172,13 @@ section.welcome {
             }
               
             p {
-              text-align: left;
+              text-align: center;
               width: 100%;
               color: $f;
       
-              // @include isLarge {
-              //   width: 90%;
-              // }
-
-
-              // @include isXLarge {
-              //   width: 75%;
-              // }
-
-
-              // @include isRetina {
-              //   width: 65%;
-              // }
-
+              @include isLarge {
+                text-align: left;
+              }
           
             }
           }
@@ -220,7 +218,7 @@ section.sec-col-main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 160px 0 100px;
+  padding: 160px 0 50px;
   min-height: 100vh;
   margin-top: -100px;
   z-index: 0;
@@ -257,7 +255,7 @@ section.sec-col-main {
 
         @media screen and (max-width: 992px) {
           object-position: 70%;
-          opacity: 0.3;
+          // opacity: 0.3;
         }
  
       }
@@ -305,14 +303,24 @@ section.sec-col-main {
         align-items: center;
         justify-content: center;
         margin: 0 30px;
+        padding-bottom: 50px;
+
+       
 
         @include isLarge {
           width: 50%;
           align-items: flex-start;
+          padding-bottom: 0;
         }
 
         &:nth-child(1) {
-          width: 45%;
+          width: 100%;
+    
+
+          @include isLarge {
+            width: 45%; 
+            
+          }
 
           .image-container {
 
@@ -324,7 +332,11 @@ section.sec-col-main {
         }
 
         &:nth-child(2) {
-          padding-left: 50px;
+          // padding-left: 50px;
+
+          @include isLarge {
+            padding-left: 50px;
+          }
           
           h2 {
             text-align: center;
@@ -361,6 +373,22 @@ section.sec-col-main {
 
        }
 
+       &:nth-child(1) {
+        flex-direction: column-reverse;
+
+        @include isLarge {
+          flex-direction: row;
+        }
+
+        .col-item {
+          // padding-bottom: 50px;
+
+          // @include isLarge {
+          //   padding-bottom: 0;
+          // }
+        }
+       }
+
        &:nth-child(2) {
         .col-item {
        
@@ -369,9 +397,13 @@ section.sec-col-main {
             // position: absolute;
             // right: 0;
             position: relative;
-            right: -120px;
+            right: -20px;
             margin: 0;
             padding: 0;
+
+            @include isLarge {
+              right: -120px;
+            }
 
 
             // img {}
@@ -445,9 +477,9 @@ section.sec-col-about {
           // opacity: 0.3;
         }
 
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 992px) {
           object-position: center;
-          // opacity: 0.3;
+          opacity: 0.3;
         }
  
       }
@@ -456,7 +488,7 @@ section.sec-col-about {
   }
 
   .container-fluid {
-    padding: 0;
+    
     position: relative;
     z-index: 99;
     display: flex;
@@ -464,18 +496,25 @@ section.sec-col-about {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 0 15px;
 
     @include isLarge {
       width: 95%;
+      padding: 0;
     }
 
     .content {
+      width: 100%;
 
       .col-container {
         display: flex;
         justify-content: flex-start;
-        height: 100vh;
         align-items: flex-start;
+
+
+        @include isLarge {
+          height: 100vh;
+        }
 
         @include is1700 {
           max-height: 995px;
@@ -483,26 +522,41 @@ section.sec-col-about {
 
 
         .col-item {
-          width: 50%;
+          width: 100%;
+
+          @include isLarge {
+            width: 50%;
+          }
 
           
 
           h2 {
-            color: $color-secondary;
+            color: $color-main;
+
+            @include isLarge {
+              color: $color-secondary;
+            }
           }
 
           p {
+
+            text-align: center;
             
             @include isLarge {
               width: 90%;
               margin: 50px auto 50px 0;
+              text-align: left;
               
             }
           }
 
           .btn-container {
             display: flex;
-            margin-left: 100px;
+            
+
+            @include isLarge {
+              margin-left: 100px;
+            }
           }
 
   
@@ -512,17 +566,29 @@ section.sec-col-about {
         &:nth-child(2) {
           justify-content: flex-end;
           align-items: center;
-          
+          padding-top: 50px;
+
+          @include isLarge {
+            padding-top: 0;
+          }
 
           .col-item {
-            width: 55%;
+            width: 100%;
+
+            @include isLarge {
+              width: 55%;
+            }
 
             h2 {
               color: $color-main;
             }
 
             .text-container {
-              padding-left: 100px;
+              padding-left: 0;
+
+              @include isLarge {
+                padding-left: 100px;
+              }
 
               p {
         
@@ -548,6 +614,11 @@ section.sec-col-secondary {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  padding: 50px 0;
+
+  @include isLarge {
+    padding: 0;
+  }
 
 
   .container-fluid {
@@ -559,13 +630,15 @@ section.sec-col-secondary {
     justify-content: center;
     width: 100%;
     margin-bottom: 0;
-    padding: 0;
-    padding-right: 50px;
+    padding: 0 15px;
+    
 
 
     @include isLarge {
       align-items: center;
       justify-content: center;
+      padding: 0;
+      padding-right: 50px;
     }
 
 
@@ -583,23 +656,41 @@ section.sec-col-secondary {
         justify-content: center;
         align-items: center;
         height: 100%;
+        position: relative;
 
         .col-item {
           display: flex;
           align-items: flex-end;
-          width: 15%;
+          width: 100%;
+          flex-direction: column;
+          position: absolute;
+          opacity: 0;
+          z-index: 0;
+          transition: opacity 1s ease;
+
+          @include isLarge {
+            flex-direction: row;
+            position: relative;
+            opacity: 1;
+          }
+
+
+          @include isLarge {
+            width: 15%;
+          }
         
 
           .image-container {
-            height: 900px;
+            height: 100%;
             width: 100%;
             z-index: 1;
             position: relative;
+
+            @include isLarge {
+              height: 900px;
+            }
     
             
-         
-
-
             img {
               width: 100%;
               height: 100%;
@@ -609,9 +700,16 @@ section.sec-col-secondary {
           }
 
           .text-container {
-            display: none;
-            width: 50%;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
             // padding-right: 20px;
+
+            @include isLarge {
+              width: 50%;
+              display: none;
+              flex-direction: row;
+            }
   
 
 
@@ -622,16 +720,30 @@ section.sec-col-secondary {
             }
 
             .col-top {
-              padding-left: 50px;
+              padding-left: 25px;
+
+              @include isLarge {
+                padding-left: 25px;
+              }
+
+              @include isXLarge {
+                padding-left: 50px;
+              }
             }
 
             .col-bottom {
               background-color: $color-third;
               border: 6px solid $color-secondary;
-              border-left: 0;
-              padding: 80px 25px 25px 50px;
+              
+              padding: 50px 15px 25px;
               padding-bottom: 30px;
-              border-radius: 0 50px 50px 0;
+              border-radius: 50px;
+
+              @include isLarge {
+                border-left: 0;
+                padding: 80px 25px 25px 50px;
+                border-radius: 0 50px 50px 0;
+              }
 
 
               h3 {
@@ -640,6 +752,11 @@ section.sec-col-secondary {
 
               p {
                 color: $f;
+                text-align: center;
+
+                @include isLarge {
+                  text-align: left;
+                }
               }
 
             }
@@ -648,12 +765,30 @@ section.sec-col-secondary {
 
 
           &.active {
-            width: 85%;
+            width: 100%;
             opacity: 1;
-            // transition: 0.5s ease;
+            transition: opacity 1s ease;
+            position: relative;
+            z-index: 1;
+
 
             .image-container {
+              padding-bottom: 30px;
+              
+              img {
+                border-radius: 399px 399px 0 0;
+                border: 6px solid $color-secondary;
+                // border-right: none;
+              }
+            }
+
+
+            @include isLarge {
+              width: 85%;
+              
+            .image-container {
               width: 50%;
+              padding-bottom: 0;
               
               img {
                 border-radius: 399px 399px 0 0;
@@ -666,13 +801,12 @@ section.sec-col-secondary {
               left: -30px;
               position: relative;
               display: flex;
-              
-            
-
               flex-direction: column;
 
 
             }
+            }
+
 
           }
 
@@ -795,11 +929,6 @@ section.sec-col-secondary {
 //     }
 //   }
 // }
-
-
-
-
-
 
 // Version 2
 // section.sec-col-secondary {
@@ -1266,13 +1395,7 @@ section.sec-col-slider {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  // border-radius: 0 0 100px 100px;
 
-  @include isRetina {
-    // min-height: 1080px;
-  }
-
- 
   .img {
     position: absolute;
     top: 0;

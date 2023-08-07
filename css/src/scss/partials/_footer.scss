@@ -127,6 +127,7 @@
           a.footer-link {
             color: $f;
             line-height: 35px;
+            // line-height: 1.8;
             font-size: 0.875rem;
             font-family: $font-secondary;
             font-weight: 600;
@@ -144,7 +145,11 @@
             }
 
             span {
-              margin-right: 20px;
+              margin-right: 10px;
+
+              @include isLarge {
+                margin-right: 20px;
+              }
             }
 
 
@@ -230,7 +235,7 @@
               width: 100%;
               flex-direction: column;
               align-items: center;
-              margin-bottom: 30px;
+              // margin-bottom: 30px;
 
 
               @include isLarge {
@@ -252,6 +257,7 @@
 
                 a.footer-link {
                   color: $f;
+                  // line-height: 1.8;
                   line-height: 35px;
                   font-size: 0.875rem;
                   font-family: $font-secondary;
@@ -280,10 +286,26 @@
         }
 
         &:nth-child(1) {
+          margin-bottom: 30px;
 
 
           @include isLarge {
             align-items: flex-start;
+            margin-bottom: 0;
+          }
+
+          .contact-info {
+
+            a {
+              line-height: 1.8;
+
+              display: flex;
+              align-items: flex-start;
+
+              @include isLarge {
+                align-items: center;
+              }
+            }
           }
         }
 
