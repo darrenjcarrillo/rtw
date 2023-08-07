@@ -180,10 +180,14 @@
   background-color: rgba(0,0,0,0);
   border: 0;
   color: $color-main;
-  margin: 80px 22% 0 auto;
+  margin: 50px auto;
   font-weight: bold;
   transition: 0.3s;
-  margin-bottom: 80px;
+  margin-bottom: 25px;
+
+  @include isLarge {
+    margin: 80px 22% 0 auto;
+  }
 
   span.icon {
     width: 60px;

@@ -612,6 +612,7 @@ section.sec-col-secondary {
   position: relative;
   min-height: 100vh;
   display: flex;
+  background-color:  #F8F8F8; 
   align-items: flex-end;
   justify-content: center;
   padding: 50px 0;
@@ -662,7 +663,7 @@ section.sec-col-secondary {
           display: flex;
           align-items: flex-end;
           width: 100%;
-          flex-direction: column;
+          flex-direction: column-reverse;
           position: absolute;
           opacity: 0;
           z-index: 0;
@@ -720,7 +721,7 @@ section.sec-col-secondary {
             }
 
             .col-top {
-              padding-left: 25px;
+           
 
               @include isLarge {
                 padding-left: 25px;
@@ -773,7 +774,7 @@ section.sec-col-secondary {
 
 
             .image-container {
-              padding-bottom: 30px;
+              padding-top: 50px;
               
               img {
                 border-radius: 399px 399px 0 0;
@@ -788,7 +789,7 @@ section.sec-col-secondary {
               
             .image-container {
               width: 50%;
-              padding-bottom: 0;
+              padding-top: 0;
               
               img {
                 border-radius: 399px 399px 0 0;
@@ -822,572 +823,6 @@ section.sec-col-secondary {
   
 }
 
-// section.sec-col-secondary {
-//   position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: center;
-
-//   .container-fluid {
-//     position: relative;
-//     z-index: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     margin-bottom: 0;
-//     padding: 0;
-//     padding-right: 50px;
-
-//     @include isLarge {
-//       align-items: center;
-//       justify-content: center;
-//     }
-
-//     .content {
-//       width: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       height: 100%;
-
-//       .col-container {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 100%;
-
-//         .col-item {
-//           display: flex;
-//           align-items: flex-end;
-//           width: 15%;
-
-//           .image-container {
-//             height: 760px;
-//             width: 100%;
-//             z-index: 1;
-//             opacity: 1;
-//             transition: width 1s ease, opacity 1s ease; /* Updated transition durations */
-
-//             img {
-//               width: 100%;
-//               height: 100%;
-//               object-fit: cover;
-//               opacity: 0.7;
-//               transition: opacity 1s ease; /* Updated transition duration */
-//             }
-//           }
-
-//           .text-container {
-//             display: none;
-//             width: 50%;
-
-//             h2 {
-//               color: $color-main;
-//             }
-
-//             .col-bottom {
-//               background-color: $color-third;
-//               padding: 0 20px;
-//               padding-bottom: 30px;
-
-//               h3 {
-//                 color: $f;
-//               }
-
-//               p {
-//                 color: $f;
-//               }
-//             }
-//           }
-
-//           &.active {
-//             width: 85%;
-//             opacity: 1;
-
-//             .image-container {
-//               width: 50%;
-//               opacity: 1;
-
-//               img {
-//                 opacity: 1;
-//               }
-//             }
-
-//             .text-container {
-//               right: 0;
-//               display: flex;
-//               flex-direction: column;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// Version 2
-// section.sec-col-secondary {
-//   position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: center;
-
-//   .container-fluid {
-//     position: relative;
-//     z-index: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     margin-bottom: 0;
-//     padding: 0;
-//     padding-right: 50px;
-
-//     @include isLarge {
-//       align-items: center;
-//       justify-content: center;
-//     }
-
-//     .content {
-//       width: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       height: 100%;
-
-//       .col-container {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 100%;
-
-//         .col-item {
-//           display: flex;
-//           align-items: flex-end;
-//           width: 15%;
-
-//           .image-container {
-//             height: 760px;
-//             width: 100%;
-
-//             img {
-//               width: 100%;
-//               height: 100%;
-//               object-fit: cover;
-//             }
-//           }
-
-//           .text-container {
-//             opacity: 0;
-//             max-height: 0;
-//             overflow: hidden;
-//             width: 0;
-//             transition: opacity 1s ease, max-height 1s ease, padding 1s ease;
-
-//             h2 {
-//               color: $color-main;
-//             }
-
-//             .col-bottom {
-//               background-color: $color-third;
-//               padding: 0 20px;
-//               padding-bottom: 30px;
-
-//               h3 {
-//                 color: $f;
-//               }
-
-//               p {
-//                 color: $f;
-//               }
-//             }
-
-//             .col-top {
-//               /* Transition opacity and visibility */
-//               transition: opacity 1s ease, visibility 0s linear;
-//               visibility: hidden;
-//             }
-//           }
-
-//           &.active {
-//             width: 85%;
-
-//             .image-container {
-//               width: 50%;
-//             }
-
-//             .text-container {
-//               /* Slide the text container into view */
-//               opacity: 1;
-//               max-height: 1000px;
-//               padding: 20px 0;
-//               width: 50%;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// version 3
-// section.sec-col-secondary {
-//   position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: center;
-
-//   .container-fluid {
-//     position: relative;
-//     z-index: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     margin-bottom: 0;
-//     padding: 0;
-//     padding-right: 50px;
-
-//     @include isLarge {
-//       align-items: center;
-//       justify-content: center;
-//     }
-
-//     .content {
-//       width: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       height: 100%;
-
-//       .col-container {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 100%;
-
-//         .col-item {
-//           display: flex;
-//           align-items: flex-end;
-//           width: 15%;
-
-//           .image-container {
-//             height: 760px;
-//             width: 100%;
-
-//             img {
-//               width: 100%;
-//               height: 100%;
-//               object-fit: cover;
-//             }
-//           }
-
-//           .text-container {
-//             /* Set initial opacity to 0 */
-//             opacity: 0;
-//             /* Set the initial position to be outside the container */
-//             transform: translateX(-100%);
-//             width: 50%;
-//             transition: opacity 0.5s ease, transform 0.5s ease;
-//             display: none;
-
-//             h2 {
-//               color: $color-main;
-//             }
-
-//             .col-bottom {
-//               background-color: $color-third;
-//               padding: 0 20px;
-//               padding-bottom: 30px;
-
-//               h3 {
-//                 color: $f;
-//               }
-
-//               p {
-//                 color: $f;
-//               }
-//             }
-
-//             .col-top {
-//               /* Transition opacity and visibility */
-//               transition: opacity 1s ease, visibility 0s linear;
-//               visibility: hidden;
-//             }
-//           }
-
-//           &.active {
-//             width: 85%;
-
-//             .image-container {
-//               width: 50%;
-//             }
-
-//             .text-container {
-//               /* Slide the text container into view */
-//               opacity: 1;
-//               transform: translateX(0);
-//               display: flex;
-
-//             }
-//           }
-
-//           &:not(.active) {
-//             /* Ensure the non-active text container does not interfere with the layout */
-//             pointer-events: none; /* Ignore pointer events */
-//             height: 760px; /* Set a fixed height to prevent collapsing */
-//             .text-container {
-//               visibility: hidden;
-//               opacity: 0;
-//               transform: translateX(-100%);
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// section.sec-col-secondary {
-//   position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: center;
-
-//   .container-fluid {
-//     position: relative;
-//     z-index: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     margin-bottom: 0;
-//     padding: 0;
-//     padding-right: 50px;
-
-//     @include isLarge {
-//       align-items: center;
-//       justify-content: center;
-//     }
-
-//     .content {
-//       width: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       height: 100%;
-
-//       .col-container {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 100%;
-
-//         .col-item {
-//           display: flex;
-//           align-items: flex-end;
-//           width: 15%;
-
-//           .image-container {
-//             height: 760px;
-//             width: 100%;
-
-//             img {
-//               width: 100%;
-//               height: 100%;
-//               object-fit: cover;
-//             }
-//           }
-
-//           .text-container {
-//             opacity: 0;
-//             max-height: 0;
-//             overflow: hidden;
-//             width: 0;
-//             transition: opacity 1s ease, max-height 1s ease, padding 1s ease; /* Increased the transition duration to 1 second */
-          
-//             h2 {
-//               color: $color-main;
-//             }
-          
-//             .col-bottom {
-//               background-color: $color-third;
-//               padding: 0 20px;
-//               padding-bottom: 30px;
-          
-//               h3 {
-//                 color: $f;
-//               }
-          
-//               p {
-//                 color: $f;
-//               }
-//             }
-          
-//             .col-top {
-//               /* Transition opacity and visibility */
-//               transition: opacity 1s ease, visibility 0s linear;
-//               visibility: hidden;
-//             }
-//           }
-          
-
-//           &.active {
-//             width: 85%;
-
-//             .image-container {
-//               width: 50%;
-//             }
-
-//             .text-container {
-//               /* Slide the text container into view */
-//               opacity: 1;
-//               max-height: 1000px;
-//               padding: 20px 0;
-//               width: 50%;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// section.sec-col-secondary {
-//   position: relative;
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: center;
-
-//   .container-fluid {
-//     position: relative;
-//     z-index: 1;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     margin-bottom: 0;
-//     padding: 0;
-//     padding-right: 50px;
-
-//     @include isLarge {
-//       align-items: center;
-//       justify-content: center;
-//     }
-
-//     .content {
-//       width: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       height: 100%;
-
-//       .col-container {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 100%;
-
-//         .col-item {
-//           display: flex;
-//           align-items: flex-end;
-//           width: 15%;
-
-//           .image-container {
-//             height: 760px;
-//             width: 100%;
-//             opacity: 1; /* Set initial opacity to 1 */
-//             transition: opacity 1s ease, width 1s ease; /* Add transition on opacity and width */
-
-//             img {
-//               width: 100%;
-//               height: 100%;
-//               object-fit: cover;
-//             }
-//           }
-
-//           .text-container {
-//             opacity: 0;
-//             max-height: 0;
-//             overflow: hidden;
-//             width: 0;
-//             transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
-
-//             h2 {
-//               color: $color-main;
-//             }
-
-//             .col-bottom {
-//               background-color: $color-third;
-//               padding: 0 20px;
-//               padding-bottom: 30px;
-
-//               h3 {
-//                 color: $f;
-//               }
-
-//               p {
-//                 color: $f;
-//               }
-//             }
-
-//             .col-top {
-//               /* Transition opacity and visibility */
-//               transition: opacity 1s ease, visibility 0s linear;
-//               visibility: hidden;
-//             }
-//           }
-
-//           &.active {
-//             width: 85%;
-
-//             .image-container {
-//               width: 50%;
-//               opacity: 1; /* Set opacity to 1 to fade in the image */
-//             }
-
-//             .text-container {
-//               /* Slide the text container into view */
-//               opacity: 1;
-//               max-height: 1000px;
-//               padding: 20px 0;
-//               width: 50%;
-//             }
-//           }
-
-//           &:not(.active) {
-//             .image-container {
-//               opacity: 1; /* Ensure the image is visible for the non-active state */
-//               width: 100%; /* Set width to 100% to toggle back to original size */
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 
 section.sec-col-slider {
   position: relative;
@@ -1414,12 +849,14 @@ section.sec-col-slider {
       height: 100%;
       position: relative;
 
-
-      @include isLarge {
-
-        &::after {
-          display: none;
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        background-color:  #F8F8F8; /* Set your desired background color here */
       }
 
             
@@ -1435,7 +872,7 @@ section.sec-col-slider {
         }
 
         @media screen and (max-width: 700px) {
-          object-position: center;
+          object-position: right;
           // opacity: 0.3;
         }
  
@@ -1449,7 +886,12 @@ section.sec-col-slider {
     z-index: 1;
     position: absolute;
     top: 5%;
-    right: 10%;
+    // right: 10%;
+
+    @include isLarge {
+      top: 5%;
+      right: 10%;
+    }
     
     @include isRetina {
       right: 8%;
@@ -1458,7 +900,9 @@ section.sec-col-slider {
     h2 {
       color: $color-secondary;
       opacity: 0.25;
-      font-size: 5rem;
+      font-size: 3.5rem;
+
+
 
 
       @include isLarge {
@@ -1529,16 +973,30 @@ section.sec-col-slider {
               // background-color: #f0f0f0;
               display: flex;
               min-height: 100vh;
+              flex-direction: column-reverse;
+              
+              @include isLarge {
+                flex-direction: row;
+              }
 
               .image-container {
-                width: 55%;
+                width: 100%;
                 height: 100%;
+
+                @include isLarge {
+                  width: 55%;
+                }
+                
 
                 .slider-image {
                   width: 100%;
-                  height: 100vh;
+                  height: 100%;
                   object-fit: cover;
                   object-position: right;
+
+                  @include isLarge {
+                    height: 100vh;
+                  }
 
 
                   @include isRetina {
@@ -1553,12 +1011,23 @@ section.sec-col-slider {
               
 
               .slider-text {
-                width: 45%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: flex-end;
-                padding: 0 50px;
+                padding: 0 15px;
+
+                @include isLarge {
+                  padding: 0 25px;
+                  margin-bottom: 70px;
+                  width: 45%;
+                  align-items: flex-start;
+                }
+
+                @include isXLarge {
+                  padding: 0 50px;
+                }
                 
 
                 h3 {
@@ -1585,8 +1054,12 @@ section.sec-col-slider {
               position: absolute;
               left: 80%;
               width: 20%;
-              bottom: 10%;
-              transform: rotate(90deg);
+            
+
+              @include isLarge {
+                bottom: 10%;
+                transform: rotate(90deg);
+              }
             }
 
 
@@ -1632,7 +1105,7 @@ section.form {
   align-items: center;
   justify-content: center;
   padding: 50px 0 50px;
-  margin-top: 50px;
+  // margin-top: 50px;
 
 
   @include isLarge {
@@ -1747,17 +1220,33 @@ section.form {
                 .image-container {
                   width: 20%;
                   position: relative;
-                  top: -100px
+                  margin-bottom: 25px;
+                  
+
+                  @include isLarge {
+                    margin-bottom: 0;
+                    top: -100px;
+                  }
+
+          
                 }
 
                 .text-container {
                   width: 80%;
-                  padding-left: 50px;
+            
+                  @include isLarge {
+                    padding-left: 50px;
+                  }
+
                   h2 {
                     color: #292929;
                     margin-bottom: 0;
                     line-height: 1.4;
   
+                  }
+
+                  h3 {
+                    margin-bottom: 0;
                   }
                       
                   p {
@@ -1807,18 +1296,27 @@ section.form {
 
 
               &:nth-child(2) {
-                width: 50%;
+                width: 100%;
+
+                @include isLarge {
+                  width: 50%;
+                }
+
+                @include isXLarge {
+                  width: 45%;
+                }
+
                 form {
                   width: 
                   100%;
-                  margin: 50px auto 0;
+                  margin: 0 auto 0;
                   padding: 0;
                   
                   @include isLarge {
-              
+                    margin: 50px auto 0;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-end;
                     padding: 0 50px;
                   }
 
@@ -1842,11 +1340,12 @@ section.form {
                   width: 100%;
                   margin: 0 auto;
 
+                
          
               
                   .input {
                     width: 100%;
-                    padding: 10px;
+                    padding: 5px;
                   
           
           
@@ -1855,7 +1354,7 @@ section.form {
                     }
 
                     @include isXLarge {
-                      width: 90%;
+                      width: 100%;
                       margin-top: 20px;
                     }
     
@@ -1882,6 +1381,7 @@ section.form {
                   padding-top: 20px;
                   padding-bottom: 20px;
                   margin-top: 30px;
+        
       
 
                   &:hover {
@@ -1890,6 +1390,7 @@ section.form {
                     transition: 0.3s;
                     transform: scale(0.95);
                     opacity: 0.5;
+                    
                   }
 
                   
