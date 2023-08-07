@@ -365,7 +365,7 @@ figure.wp-block-embed {
 	z-index: 99999999999;
 	line-height: 0;
 	padding: 0px 0px;
-	color: rgba($color-secondary, 1);
+	color: rgba($color-main, 1);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -378,7 +378,7 @@ figure.wp-block-embed {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: $color-secondary;
+	background: $color-main;
 	border-radius: 2px;
 	color: #fff;
 	border: 1px solid $f;
