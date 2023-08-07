@@ -1,20 +1,60 @@
 // Footer
 
 #main {
-  background: rgb(37,146,167);
-  background: -moz-linear-gradient(69deg, rgba(37,146,167,1) 0%, rgba(2,104,156,1) 80%);
-  background: -webkit-linear-gradient(69deg, rgba(37,146,167,1) 0%, rgba(2,104,156,1) 80%);
-  background: linear-gradient(69deg, rgba(37,146,167,1) 0%, rgba(2,104,156,1) 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2592a7",endColorstr="#02689c",GradientType=1);
+  position: relative;
+
 
   section.footer-main {
-    padding: 50px 0 0 ;
+    padding: 80px 0 0 ;
+
+       
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    // z-index: 0;
+    align-items: center;
+    justify-content: center;
+
+    picture {
+      width: 100%;
+      height: 100%;
+      position: relative;
 
 
-  .container {
+      
+      &::after {
+        content: close-quote;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(#0D0D0D, 0.64);
+        height: 100%;
+      }
+
+            
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+          
+  }
+
+
+
+  .container-fluid {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    z-index: 1;
 
 
     @media screen and (max-width: 992px) {
@@ -31,7 +71,7 @@
     }
 
     @include isRetina {
-      width: 85%;
+      // width: 85%;
     }
   }
     .content {
@@ -39,13 +79,24 @@
       width: 100%;
       flex-direction: column;
       align-content: center;
+
+
+      @include isLarge {
+        flex-direction: row;
+      }
   
       .block-col {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; 
+        justify-content: flex-start; 
+        z-index: 1;
+
+        @include isLarge {
+          width: 50%;
+        }
+
 
         .footer-logo {
           margin-bottom: 30px;
@@ -57,74 +108,11 @@
             }
 
             img {
-              width: 350px;
+              width: 150px;
             }
           }
         }
       
-
-        .col-container {
-          // margin-bottom: 30px;
-          text-align: center;
-          width: 100%;
-        
-          .col-items {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .col-item {
-              display: flex;
-              justify-content: center;
-              width: 100%;
-              flex-direction: column;
-              align-items: center;
-              margin-bottom: 30px;
-
-
-              @include isLarge {
-                flex-direction: row;
-              }
-
-
-              span.item {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-
-                  @include isLarge {
-                    align-items: flex-start;
-                  }
-         
-
-                a.footer-link {
-                  color: $f;
-                  line-height: 35px;
-                  font-size: 0.875rem;
-                  font-family: $font-secondary;
-                  font-weight: normal;
-                  text-transform: uppercase;
-                  text-decoration: none;
-                  font-weight: 600;
-                  margin: 0 25px;
-
-                  &:hover {
-                    text-decoration: none;
-                    opacity: 0.5;
-                  }
-                }
-
-
-
-
-              }
-
-
-              
-            }
-    
-          }
-        }
 
 
         .contact-info {
@@ -220,17 +208,97 @@
         }
 
 
-        &:nth-child(3) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+        
+        .col-container {
+          // margin-bottom: 30px;
+          text-align: center;
+          width: 100%;
+        
+          .col-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-          // @include isLarge {
-          //   flex-direction: row;
-          // } 
-        } 
+            @include isLarge {
+              flex-direction: row;
+              align-items: flex-start;
+            }
+
+            .col-item {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              flex-direction: column;
+              align-items: center;
+              margin-bottom: 30px;
 
 
+              @include isLarge {
+                // flex-direction: row;
+                align-items: flex-start;
+
+              }
+
+
+              span.item {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+
+                  @include isLarge {
+                    align-items: flex-start;
+                  }
+         
+
+                a.footer-link {
+                  color: $f;
+                  line-height: 35px;
+                  font-size: 0.875rem;
+                  font-family: $font-secondary;
+                  font-weight: normal;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  font-weight: 600;
+                  margin: 0 25px;
+
+                  &:hover {
+                    text-decoration: none;
+                    opacity: 0.5;
+                  }
+                }
+
+
+
+
+              }
+
+
+              
+            }
+    
+          }
+        }
+
+        &:nth-child(1) {
+
+
+          @include isLarge {
+            align-items: flex-start;
+          }
+        }
+
+        &:nth-child(2) {
+          
+          .col-container {
+            @include isLarge {
+              justify-content: flex-end;
+            }
+          }
+        }
+
+
+
+        
 
 
       }
@@ -272,12 +340,13 @@
         &:nth-child(1) {
           display: flex;
           justify-content: center;
-          padding: 30px 0 30px;
-         
+          padding: 30px 15px 30px;
+          max-width: 90%;
   
           .flexcen {
   
             .copy__content {
+             
 
               span {
                 text-transform: uppercase;
@@ -414,12 +483,20 @@
         font-weight: 600;
         text-transform: uppercase;
         font-size: 0.75rem;
-  
-        @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include isLarge {
           display: flex;
-          flex-direction: column;
           align-items: center;
+          flex-direction: row;
+          margin: 0;
+     
         }
+
+
+    
       }
       span.l {
         margin: 0 5px;
