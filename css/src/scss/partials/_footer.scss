@@ -5,7 +5,11 @@
 
 
   section.footer-main {
-    padding: 80px 0 0 ;
+    padding: 60px 0 0 ;
+
+    @include isLarge {
+      padding: 80px 0 0 ;
+    }
 
        
   .img {
@@ -404,6 +408,7 @@
 
           @include isLarge {
             padding: 10px 15px;
+         
           }
     
 
@@ -414,6 +419,8 @@
   
             @include isLarge {
               flex-direction: row;
+              width: 90%;
+              margin: 0 auto;
             }
     
             .copy__content {

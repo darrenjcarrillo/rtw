@@ -823,7 +823,6 @@ section.sec-col-secondary {
   
 }
 
-
 section.sec-col-slider {
   position: relative;
 
@@ -840,7 +839,6 @@ section.sec-col-slider {
     display: flex;
     margin: 0 auto;
     z-index: 1;
-    // border-radius: 0 0 100px 100px;
     align-items: center;
     justify-content: center;
 
@@ -866,7 +864,6 @@ section.sec-col-slider {
         height: 100%;
         width: 100%;
 
-        // border-radius: 0 0 60px 60px;
         @media screen and (max-width: 1240px) {
           // opacity: 0.3;
         }
@@ -886,7 +883,6 @@ section.sec-col-slider {
     z-index: 1;
     position: absolute;
     top: 5%;
-    // right: 10%;
 
     @include isLarge {
       top: 5%;
@@ -901,9 +897,6 @@ section.sec-col-slider {
       color: $color-secondary;
       opacity: 0.25;
       font-size: 3.5rem;
-
-
-
 
       @include isLarge {
          font-size: 5rem;
@@ -929,8 +922,6 @@ section.sec-col-slider {
     width: 100%;
     margin-bottom: 0;
     padding: 0;
-
-
 
     @include isLarge {
       align-items: center;
@@ -970,7 +961,6 @@ section.sec-col-slider {
 
             .swiper-slide {
               text-align: center;
-              // background-color: #f0f0f0;
               display: flex;
               min-height: 100vh;
               flex-direction: column-reverse;
@@ -1086,11 +1076,6 @@ section.sec-col-slider {
             }
           }
   
-
-
-
- 
-
         }
       }
 
@@ -1098,15 +1083,12 @@ section.sec-col-slider {
   }
 }
 
-
 section.form {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px 0 50px;
-  // margin-top: 50px;
-
 
   @include isLarge {
     padding: 80px 0;
@@ -1141,8 +1123,7 @@ section.form {
         width: 100%;
       }
     }
-          
-  
+    
   }
 
 
@@ -1179,9 +1160,6 @@ section.form {
         flex-direction: column;
         z-index: 1;
         width: 100%;
-
-   
-
 
         .content {
           width: 100%;
@@ -1381,6 +1359,7 @@ section.form {
                   padding-top: 20px;
                   padding-bottom: 20px;
                   margin-top: 30px;
+                  margin: 30px auto 0;
         
       
 
