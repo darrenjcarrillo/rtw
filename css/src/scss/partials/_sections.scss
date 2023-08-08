@@ -8,13 +8,14 @@ section.welcome {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  // padding-bottom: 200px;
 
   @include isLarge {
     align-items: flex-end;
   }
 
   @include isRetina {
-    min-height: 1080px;
+    min-height: 100vh;
   }
 
  
@@ -30,6 +31,7 @@ section.welcome {
     // border-radius: 0 0 100px 100px;
     align-items: center;
     justify-content: center;
+
 
     picture {
       width: 100%;
@@ -69,7 +71,7 @@ section.welcome {
         object-position: top;
         height: 100%;
         width: 100%;
-
+ 
         border-radius: 0 0 60px 60px;
         @media screen and (max-width: 1240px) {
           // opacity: 0.3;
@@ -79,7 +81,7 @@ section.welcome {
           object-position: top;
           // opacity: 0.3;
         }
- 
+
       }
     }
           
@@ -304,6 +306,7 @@ section.sec-col-main {
         justify-content: center;
         margin: 0 30px;
         padding-bottom: 50px;
+        position: relative;
 
        
 
@@ -311,6 +314,23 @@ section.sec-col-main {
           width: 50%;
           align-items: flex-start;
           padding-bottom: 0;
+        }
+
+
+        .text-container {
+          position: absolute;
+          bottom: 15%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          @include isLarge {
+            bottom: 7%;
+          }
+
+          h3 {
+            color: $f;
+          }
         }
 
         &:nth-child(1) {
@@ -390,6 +410,14 @@ section.sec-col-main {
        }
 
        &:nth-child(2) {
+        
+        @include isLarge {
+          padding-top: 50px;
+        }
+
+        @include isXLarge {
+          padding-top: 0;
+        }
         .col-item {
        
 
@@ -402,11 +430,35 @@ section.sec-col-main {
             padding: 0;
 
             @include isLarge {
+              right: -60px;
+              width: 60%;
+            }
+
+            @include isXLarge {
+              right: -90px;
+              width: 55%;
+            }
+
+            @include isRetina {
               right: -120px;
             }
 
 
             // img {}
+
+            .text-container {
+              bottom: 25%;
+              margin-left: 0;
+
+              @include isLarge {
+                bottom: 15%;
+              }
+
+              @include isXLarge {
+                bottom: 10%;
+                margin-left: 50px;
+              }
+            }
           }
 
           &:nth-child(1) {
@@ -420,8 +472,12 @@ section.sec-col-main {
               margin: 0 auto 0 0;
           
               @include isLarge {
-                width: 80%;
+                width: 90%;
                 text-align: left;
+              }
+
+              @include isXLarge {
+                width: 80%;
               }
   
    

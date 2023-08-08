@@ -417,26 +417,30 @@ h3 {
     color: $color-third;
     margin: 0;
     font-weight: 300;
-    font-size: 1.7rem;
+    font-size: 1.1rem;
     // letter-spacing: 5px;
     text-align: center;
+
+    @include isMedium {
+      font-size: 1.3rem;
+    }
   
     
    
     @include isLarge {
       margin-bottom: 30px;
-      font-size: 1.9375rem;
+      font-size: 1.5rem;
       text-align: left;
     }
 
     @include isXLarge {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   
   
     
     @include isRetina {
-      font-size: 2.2rem;
+      font-size: 1.875rem;
     }
 
 
